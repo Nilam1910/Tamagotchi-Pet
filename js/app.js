@@ -1,5 +1,5 @@
 console.log("tamagotchiLove")
 
 class Love {
-   constructor(age, health=100, food, sleepTime, wakeupTime, playTime)
+   constructor(name, age, health=100, food, sleepTime, wakeupTime, sick, seeDoctore)
 }
