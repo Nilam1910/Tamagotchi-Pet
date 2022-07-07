@@ -1,4 +1,10 @@
 body{
    background-color: aquamarine;
+   background-image:url(/IMG_1793.jpg);
    
+}
+img{
+  width: 100px; 
+  height: 150px;
+  
 }
