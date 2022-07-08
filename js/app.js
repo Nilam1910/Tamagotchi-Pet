@@ -1,5 +1,6 @@
 console.log("tamagotchi Game")
-
+alert("Wellcome to Tamagotchi Game")
+alert("Rules of the Game:")
 
 class Game {
    constructor( age, hunger=5, sleepines=3, boredom=5){
@@ -19,24 +20,24 @@ class Game {
    bored(){
       this.boredom --
    }
+   age(){
+      this.age++
+   }
 
 }
    let tamagotchi = new Game()
-   tamagotchi.feed(){
+   // tamagotchi.feed(){
       
-   }
+   // }
 // set alert when start button click, "Welcome to Tom's Tamagotchi Home Game" 
-function start(){
+let getStart = document.querySelector("#button-1")
+ getStart.addEventListener("click", ()=>{
    console.log("1: start")
+   prompt("Enter your Pet Name")
+   
+})
 
-}
-// let getStart = document.querySelector("#button-1")
-// console.log(getStart)
-// getStart.addEventListener("click",()=>{
 
-// alert("wlcome")
-// prompt("Enter your name")
-// })
 
 
 // turn off the light so the sleepyness don't go up
@@ -61,28 +62,13 @@ function start(){
 
 
 
+//  document.getElementById("button-1").addEventListener("click", start()) tried this dnot woriking
+// document.getElementById("button-2").addEventListener("click", feed())
+// document.getElementById("button-3").addEventListener("click", sleepy())
+// document.getElementById("button-4").addEventListener("click", play())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("button-1").addEventListener("click", start)
-document.getElementById("button-2").addEventListener("click", FileSystemDirectoryHandle)
-document.getElementById("button-3").addEventListener("click", sleepy)
-document.getElementById("button-4").addEventListener("click", play)
-
-document.getElementById("all-buttons").addEventListener("click", () => {
-   start()
-   feed()
-   sleepy()
-   play()})
+// document.getElementById("all-buttons").addEventListener("click", () => {
+//    start()
+//    feed()
+//    sleepy()
+//    play()})
