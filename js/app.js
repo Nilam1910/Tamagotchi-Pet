@@ -20,11 +20,12 @@ let startButton=document.querySelector('#buttonOne')
 buttonOne = document.querySelector("button")
 
    class Cub {
-      constructor( age, hunger, sleepiness, boredom){
+      constructor( name,age, hunger, sleepiness, boredom){
          this.age = age
          this.hunger = hunger
          this.sleepiness = sleepiness
          this.boredom = boredom
+         this.name = name
          }
 
          start(){
@@ -133,17 +134,18 @@ buttonOne = document.querySelector("button")
                }
             },1000)
          }
-         setName(){
-            this.name = prompt("Name your pet")
-            let nameId = document.querySelector("#name")
-            nameId.innerText = `${this.name}`
-         }
+         // setName(){
+         //    this.name = prompt("Name your pet")
+         //    let nameId = document.querySelector("#name")
+         //    nameId.innerText = `${this.name}`
+         // }
       } 
  
      
 
-let tamagotchi = new Cub(0, 10, 10, 10) 
-document.getElementById("button-1").addEventListener("click", (e)=>{tamagotchi.start(),tamagotchi.age()})
+let tamagotchi = new Cub("name",0, 10, 10, 10)
+
+document.getElementById("buttonOne").addEventListener("click", (e)=>{tamagotchi.start();tamagotchi.age()})
 document.getElementById("button-2").addEventListener("click", (e)=>{tamagotchi.feed()})
 document.getElementById("button-3").addEventListener("click", (e)=>{tamagotchi.sleepy()})
 document.getElementById("button-4").addEventListener("click", (e)=>{tamagotchi.boredom()}) 
