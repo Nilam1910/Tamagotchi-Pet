@@ -4,6 +4,7 @@ alert("Rules of the Pet-Game: You have three things to worry about hunger,sleepi
 alert("After start button clicked your pet age get incresed and they morph at certian ages.")
 
 // create class, instatiate your Tamagotchi ,display a character of your choice the screen to represent your pet. Disply the matrics for your pet(hunger,sleepiness,boredon(1-10 scale) and Age)
+
 let hungerButton=document.querySelector("#button-2")
 let hungerTime=document.querySelector("#hug")
 
@@ -18,7 +19,7 @@ let startButton=document.querySelector('#buttonOne')
 
 buttonOne = document.querySelector("button")
 
-class Pet {
+   class Pet {
    constructor( age, hunger, sleepiness, boredom){
       this.age = age
       this.hunger = hunger
@@ -51,7 +52,7 @@ class Pet {
 
 
 
-   }
+      }
 
  
  }
