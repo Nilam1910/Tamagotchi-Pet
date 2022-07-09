@@ -15,15 +15,19 @@ body{
     }
 
 #cub{
+  position: absolute;
   width: 100px; 
   height: 150px;
-  animation: left-to-right 5s ease-in forwards infinite altenate;
+  animation: left-to-right 3s ease-in infinite alternate;
 } 
   @keyframes left-to-right{
-    100%{
-    transform: translateX(100%);
+    from{
+      right:500px
+      
     }
-  }
+    to{right: 800px}
+    }
+  
 
 p{
   text-align: center;
@@ -63,5 +67,5 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+ align-items: center;
 }

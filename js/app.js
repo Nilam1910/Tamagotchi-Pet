@@ -4,60 +4,105 @@ alert("Rules of the Pet-Game: You have three things to worry about hunger,sleepi
 alert("After start button clicked your pet age get incresed and they morph at certian ages.")
 
 // create class, instatiate your Tamagotchi ,display a character of your choice the screen to represent your pet. Disply the matrics for your pet(hunger,sleepiness,boredon(1-10 scale) and Age)
+let hungerButton=document.querySelector("#button-2")
+let hungerTime=document.querySelector("#hug")
+
+let sleepinessButton=document.querySelector("#button-3")
+let sleepinesTime=document.querySelector("#sleep")
+
+let boredomButton=document.querySelector("#button-4")
+let boredomTime=document.querySelector("#bore")
+
+let getAllDivs=document.querySelector("#all-divs")
+let startButton=document.querySelector('#buttonOne')
+
+buttonOne = document.querySelector("button")
+
 class Pet {
-   constructor( age, hunger, sleepines, boredom){
+   constructor( age, hunger, sleepiness, boredom){
       this.age = age
       this.hunger = hunger
       this.sleepines = sleepines
       this.boredom = boredom
-   }
-   // once start butooon click need to make times go down and every click make age go up
-   start(){
-      let startActive = setInterval(()=>{
-         if(this.hunger >= 1 && this.sleepines >= 1 && this.boredom >= 1){
-            this.hunger --
-            this.hungerTime.innerText = this.hunger //innerhtml 
-            console.log(hangerTime)
+      }
 
-            this.sleepines --
-            this.sleepinesTime.innerText = this.sleepines
-            console.log(sleepinesTime)
+      hunger () {
+      // interval
+      // hunger up
+      //query selector to hunger number
+      // set query selector.innerhtml = hunger number
+      // query selector button
+      // eventlistener for button where which makes it lower
 
-            this.boredom --
-            this.boredomTime.innerText = this.boredom
-            console.log(boredomTime)
-         }else if(this.hunger <= 0 || this.sleepines <= 0 || this.boredom <= 0){
-            alert("The pet has Fainted")
-            clearInterval(startActive)
-         }else {
-            console.log("Not working")
-         }
-      }, 2000)
-   }
-   feed(){
-      // console.log("feed food")
-   //    let feedTime =setInterval(()=>{
-   //       this.hunger -- 
-   //       if(this.hunger <=0){
-   //          alert("pet has fainted from hunger")
 
-   //       }else
 
-   //   }) 
-   }
-   sleey(){
-      this.sleepines --
-   }
-   bored(){
-      this.boredom --
-   }
-   age(){
-      this.age++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    }
 
-}
-   let tamagotchi = new Pet(0, 10, 10, 10)
-   add
+ 
+ }
+ 
+ // once start butooon click need to make times go down and age go up
+//    start(){
+//       let startActive = setInterval(()=>{
+//          if(this.hunger >= 1 && this.sleepines >= 1 && this.boredom >= 1){
+//             this.hunger --
+//             this.hungerTime.innerText = this.hunger //innerhtml 
+//             console.log(hangerTime)
+
+//             this.sleepines --
+//             this.sleepinesTime.innerText = this.sleepines
+//             console.log(sleepinesTime)
+
+//             this.boredom --
+//             this.boredomTime.innerText = this.boredom
+//             console.log(boredomTime)
+//          }else if(this.hunger <= 0 || this.sleepines <= 0 || this.boredom <= 0){
+//             alert("The pet has Fainted")
+//             clearInterval(startActive)
+//          }else {
+//             console.log("Not working")
+//          }
+//       }, 2000)
+//    }
+//    feed(){
+//       // console.log("feed food")
+//       let feedTime =setInterval(()=>{
+//          this.hunger -- 
+//          if(this.hunger <=0){
+//             alert("pet has fainted from hunger")
+
+//          }else
+
+//      }) 
+//    }
+//    sleey(){
+//       this.sleepines --
+//    }
+//    bored(){
+//       this.boredom --
+//    }
+//    age(){
+//       this.age++
+//    }
+
+// }
+let tamagotchi = new Pet(0, 10, 10, 10) 
+   
    
       
    
