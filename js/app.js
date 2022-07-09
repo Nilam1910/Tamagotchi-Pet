@@ -9,7 +9,7 @@ let hungerButton=document.querySelector("#button-2")
 let hungerTime=document.querySelector("#hug")
 
 let sleepinessButton=document.querySelector("#button-3")
-let sleepinesTime=document.querySelector("#sleep")
+let sleepinessTime=document.querySelector("#sleep")
 
 let boredomButton=document.querySelector("#button-4")
 let boredomTime=document.querySelector("#bore")
@@ -19,90 +19,94 @@ let startButton=document.querySelector('#buttonOne')
 
 buttonOne = document.querySelector("button")
 
-   class Pet {
-   constructor( age, hunger, sleepiness, boredom){
-      this.age = age
-      this.hunger = hunger
-      this.sleepines = sleepines
-      this.boredom = boredom
+   class Cub {
+      constructor( age, hunger, sleepiness, boredom){
+         this.age = age
+         this.hunger = hunger
+         this.sleepiness = sleepiness
+         this.boredom = boredom
+         }
+
+         start(){
+            let startActive = setInterval(()=>{
+               if(this.hunger >= 1 && this.sleepiness >= 1 && this.boredom >= 1){
+                  this.hunger --
+                  this.hungerButton.innerText = this.hunger //innerhtml 
+                  console.log(hungerButton)
+      
+                  this.sleepiness --
+                  this.sleepinessButton.innerText = this.sleepiness
+                  console.log(sleepinessButton)
+      
+                  this.boredom --
+                  this.boredomButton.innerText = this.boredom
+                  console.log(boredomButton)
+               }else if(this.hunger <= 0 || this.sleepiness <= 0 || this.boredom <= 0){
+                  alert("The Cub has Fainted")
+                  clearInterval(startActive)
+               }else {
+                  console.log("Not working")
+               }
+            }, 2000)
+         }
+
+         feed(){
+             console.log("feed") 
+             this.hunger++
+             hungerButton.innerText=this.hunger    
+            let feedActive =setInterval(()=>{
+                    let hugId=document.querySelector("#hug") 
+                     this.hunger -- 
+                     if(this.hunger ===0){
+                        alert("pet has fainted from hunger")
+                        removeAll-divs.romove()
+                        document.querySelector("#cub").src =(download(1).jpeg)
+                        document.body.style.backgroundImage = clearInterval(intervalId)
+                        document.querySelector("button").disabled = false;
+                        return;
+                     }
+            
+                 },3000)
+                 hungerButton.addEventListener("click",()=>{
+                  tamagotchi.feed()
+                  console.log(tamagotchi.hunger)
+                 }) 
+          }
+
+          sleey(){
+            this.sleepines --
+         }
+         bored(){
+            this.boredom --
+         }
+         age(){
+            this.age++
+         }
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
       }
-
-      hunger () {
-      // interval
-      // hunger up
-      //query selector to hunger number
-      // set query selector.innerhtml = hunger number
-      // query selector button
-      // eventlistener for button where which makes it lower
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      }
+   
 
  
- }
  
  // once start butooon click need to make times go down and age go up
-//    start(){
-//       let startActive = setInterval(()=>{
-//          if(this.hunger >= 1 && this.sleepines >= 1 && this.boredom >= 1){
-//             this.hunger --
-//             this.hungerTime.innerText = this.hunger //innerhtml 
-//             console.log(hangerTime)
+  
+  
+//    
 
-//             this.sleepines --
-//             this.sleepinesTime.innerText = this.sleepines
-//             console.log(sleepinesTime)
-
-//             this.boredom --
-//             this.boredomTime.innerText = this.boredom
-//             console.log(boredomTime)
-//          }else if(this.hunger <= 0 || this.sleepines <= 0 || this.boredom <= 0){
-//             alert("The pet has Fainted")
-//             clearInterval(startActive)
-//          }else {
-//             console.log("Not working")
-//          }
-//       }, 2000)
-//    }
-//    feed(){
-//       // console.log("feed food")
-//       let feedTime =setInterval(()=>{
-//          this.hunger -- 
-//          if(this.hunger <=0){
-//             alert("pet has fainted from hunger")
-
-//          }else
-
-//      }) 
-//    }
-//    sleey(){
-//       this.sleepines --
-//    }
-//    bored(){
-//       this.boredom --
-//    }
-//    age(){
-//       this.age++
-//    }
-
-// }
-let tamagotchi = new Pet(0, 10, 10, 10) 
+let tamagotchi = new Cub(0, 10, 10, 10) 
    
    
       
