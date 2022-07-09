@@ -62,8 +62,8 @@ buttonOne = document.querySelector("button")
                         removeAll-divs.romove()
                         document.querySelector("#cub").src =(download(1).jpeg)
                         document.body.style.backgroundImage = clearInterval(intervalId)
-                        document.querySelector("button").disabled = false;
-                        return;
+                        document.querySelector("button").disabled = false
+                        return
                      }
             
                  },3000)
@@ -73,11 +73,46 @@ buttonOne = document.querySelector("button")
                  }) 
           }
 
-          sleey(){
-            this.sleepines --
+          sleepy(){
+            this.sleepiness ++
+             sleepinessButton.innerText=this.sleepiness   
+            let sleepyActive =setInterval(()=>{
+                    let sleepId=document.querySelector("#sleep") 
+                     this.sleepiness -- 
+                     if(this.sleepiness ===0){
+                        alert("pet has fainted from Sleepiness")
+                        removeAll-divs.romove()
+                        document.querySelector("#cub").src =(download(1).jpeg)
+                        document.body.style.backgroundImage = clearInterval(intervalId)
+                        document.querySelector("button").disabled = false
+                        return
+                     }
+            
+                 },3000)
+                 sleepinessButton.addEventListener("click",()=>{
+                  tamagotchi.sleepy()
+                  console.log(tamagotchi.sleepiness)
+                 }) 
          }
          bored(){
-            this.boredom --
+            this.boredom ++
+             boredomButton.innerText=this.boredom   
+            let boredActive =setInterval(()=>{
+                    let bore=document.querySelector("#bore") 
+                     this.boredom -- 
+                     if(this.boredom ===0){
+                        alert("pet has fainted from bored")
+                        removeAll-divs.romove()
+                        document.querySelector("#cub").src =(download(1).jpeg)
+                        document.body.style.backgroundImage = clearInterval(intervalId)
+                        document.querySelector("button").disabled = false
+                        return
+                     }
+                 },3000)
+                 boredomButton.addEventListener("click",()=>{
+                  tamagotchi.bored()
+                  console.log(tamagotchi.boredom)
+                 }) 
          }
          age(){
             this.age++
