@@ -60,7 +60,7 @@ buttonOne = document.querySelector("button")
                      if(this.hunger ===0){
                         alert("pet has fainted from hunger")
                         removeAll-divs.romove()
-                        document.querySelector("#cub").src =(download(1).jpeg)
+                        document.querySelector("#cub").src ="../download (1).jpeg"
                         document.body.style.backgroundImage = clearInterval(intervalId)
                         document.querySelector("button").disabled = false
                         return
@@ -82,7 +82,7 @@ buttonOne = document.querySelector("button")
                      if(this.sleepiness ===0){
                         alert("pet has fainted from Sleepiness")
                         removeAll-divs.romove()
-                        document.querySelector("#cub").src =(download(1).jpeg)
+                        document.querySelector("#cub").src ="../download (1).jpeg"
                         document.body.style.backgroundImage = clearInterval(intervalId)
                         document.querySelector("button").disabled = false
                         return
@@ -103,7 +103,7 @@ buttonOne = document.querySelector("button")
                      if(this.boredom ===0){
                         alert("pet has fainted from bored")
                         removeAll-divs.romove()
-                        document.querySelector("#cub").src =(download(1).jpeg)
+                        document.querySelector("#cub").src = "../download (1).jpeg"
                         document.body.style.backgroundImage = clearInterval(intervalId)
                         document.querySelector("button").disabled = false
                         return
@@ -115,36 +115,41 @@ buttonOne = document.querySelector("button")
                  }) 
          }
          age(){
-            this.age++
+            let intervalId = setInterval(()=>{
+               let agedId = document.querySelector("#age1")
+               agedId.innerText = `${cub.age}`
+               cub.age ++
+               if(cub.age ==3){
+                  alert("Your pet has gained new form!!")
+                  document.querySelector("#cub").src = "../sitting-cute-tiger-cartoon-character-vector-isolated-colorful-illustration-for-print-and-design-posters-nursery-design-cards-stickers-room-dec-2F1NM2X.jpeg"
+               }
+               if(cub.age == 7){
+                  alert("Your pet has gained new form!!")
+                  document.querySelector("#cub").src = "../Users/nilampatel/Desktop/sei-cosmos/projects/imagined-game/images (1).jpeg"
+               }
+               if(cub.age == 15){
+                  alert("Your pet has hits final form!!")
+                  document.querySelector("#cub").src = "../download.png"
+               }
+            },1000)
          }
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-      }
-   
-
+         setName(){
+            this.name = prompt("Name your pet")
+            let nameId = document.querySelector("#name")
+            nameId.innerText = `${this.name}`
+         }
+      } 
  
- 
- // once start butooon click need to make times go down and age go up
-  
-  
-//    
+     
 
 let tamagotchi = new Cub(0, 10, 10, 10) 
-   
-   
-      
+document.getElementById("button-1").addEventListener("click", (e)=>{tamagotchi.start(),tamagotchi.age()})
+document.getElementById("button-2").addEventListener("click", (e)=>{tamagotchi.feed()})
+document.getElementById("button-3").addEventListener("click", (e)=>{tamagotchi.sleepy()})
+document.getElementById("button-4").addEventListener("click", (e)=>{tamagotchi.boredom()}) 
+
+ // some thought process:
+ // once start butooon click need to make times go down and age go up     
    
 // set alert when start button click, "Welcome to Tom's Tamagotchi Pet Cub" 
 // let getStart = document.querySelector("#button-1")
@@ -159,8 +164,5 @@ let tamagotchi = new Cub(0, 10, 10, 10)
 // first see the health
 // direct him the way to find home
 
-document.getElementById("button-1").addEventListener("click", (e)=>{tamagotchi.start(),tamagotchi.age()})
-document.getElementById("button-2").addEventListener("click", (e)=>{tamagotchi.feed()})
-document.getElementById("button-3").addEventListener("click", (e)=>{tamagotchi.sleepy()})
-document.getElementById("button-4").addEventListener("click", (e)=>{tamagotchi.boredom()})
+
 
