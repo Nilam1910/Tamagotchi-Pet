@@ -5,11 +5,63 @@ body{
    background-repeat: no-repeat;
    height: 100vh;
    width: 100vw;
+   
 }
+.images{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+    }
+
 #cub{
   width: 100px; 
   height: 150px;
+  animation: left-to-right 5s ease-in forwards infinite altenate;
+} 
+  @keyframes left-to-right{
+    100%{
+    transform: translateX(100%);
+    }
+  }
+
+p{
+  text-align: center;
+  bottom: 50px;
+
+}
+h1{
+  text-align: center;
+  bottom: 50px;
+}
+
+#button-1{
+  width: 100px;
+  height: 35px;
+  background-color: rgb(240, 169, 87);
+}
+  
+#button-2 {
+  width: 100px;
+  height: 25px;
+  background-color: rgb(82, 194, 238);
+
+}
+#button-3{
+  width: 100px;
+  height: 25px;
+  background-color: rgb(82, 194, 238);
+  
+}
+#button-4{
+  width: 100px;
+  height: 25px;
+  background-color: rgb(82, 194, 238);
+}
+
+.all-divs{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  bottom: 0%;
+ 
 }
