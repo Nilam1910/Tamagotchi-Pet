@@ -32,15 +32,15 @@ buttonOne = document.querySelector("button")
             let startActive = setInterval(()=>{
                if(this.hunger >= 1 && this.sleepiness >= 1 && this.boredom >= 1){
                   this.hunger --
-                  this.hungerButton.innerText = this.hunger //innerhtml 
+                  hungerButton.innerText = this.hunger //innerhtml 
                   console.log(hungerButton)
       
                   this.sleepiness --
-                  this.sleepinessButton.innerText = this.sleepiness
+                  sleepinessButton.innerText = this.sleepiness
                   console.log(sleepinessButton)
       
                   this.boredom --
-                  this.boredomButton.innerText = this.boredom
+                  boredomButton.innerText = this.boredom
                   console.log(boredomButton)
                }else if(this.hunger <= 0 || this.sleepiness <= 0 || this.boredom <= 0){
                   alert("The Cub has Fainted")
@@ -60,9 +60,9 @@ buttonOne = document.querySelector("button")
                      this.hunger -- 
                      if(this.hunger ===0){
                         alert("pet has fainted from hunger")
-                        removeAll-divs.romove()
+                        // getAllDivs.remove()
                         document.querySelector("#cub").src ="../download (1).jpeg"
-                        document.body.style.backgroundImage = clearInterval(intervalId)
+                        document.body.style.backgroundImage = clearInterval(feedActive)
                         document.querySelector("button").disabled = false
                         return
                      }
@@ -82,9 +82,9 @@ buttonOne = document.querySelector("button")
                      this.sleepiness -- 
                      if(this.sleepiness ===0){
                         alert("pet has fainted from Sleepiness")
-                        removeAll-divs.romove()
+                        // getAllDivs.remove()
                         document.querySelector("#cub").src ="../download (1).jpeg"
-                        document.body.style.backgroundImage = clearInterval(intervalId)
+                        document.body.style.backgroundImage = clearInterval(sleepyActive)
                         document.querySelector("button").disabled = false
                         return
                      }
@@ -103,9 +103,9 @@ buttonOne = document.querySelector("button")
                      this.boredom -- 
                      if(this.boredom ===0){
                         alert("pet has fainted from bored")
-                        removeAll-divs.romove()
+                        // getAllDivs.remove()
                         document.querySelector("#cub").src = "../download (1).jpeg"
-                        document.body.style.backgroundImage = clearInterval(intervalId)
+                        document.body.style.backgroundImage = clearInterval(boredActive)
                         document.querySelector("button").disabled = false
                         return
                      }
@@ -115,20 +115,20 @@ buttonOne = document.querySelector("button")
                   console.log(tamagotchi.boredom)
                  }) 
          }
-         age(){
+         ageUp(){
             let intervalId = setInterval(()=>{
                let agedId = document.querySelector("#age1")
-               agedId.innerText = `${cub.age}`
-               cub.age ++
-               if(cub.age ==3){
+               agedId.innerText = `${this.age}`
+               this.age ++
+               if(this.age ==3){
                   alert("Your pet has gained new form!!")
                   document.querySelector("#cub").src = "../sitting-cute-tiger-cartoon-character-vector-isolated-colorful-illustration-for-print-and-design-posters-nursery-design-cards-stickers-room-dec-2F1NM2X.jpeg"
                }
-               if(cub.age == 7){
+               if(this.age == 7){
                   alert("Your pet has gained new form!!")
-                  document.querySelector("#cub").src = "../Users/nilampatel/Desktop/sei-cosmos/projects/imagined-game/images (1).jpeg"
-               }
-               if(cub.age == 15){
+                  document.querySelector("#cub").src = "../cub.jpeg"
+               } 
+               if(this.age == 15){
                   alert("Your pet has hits final form!!")
                   document.querySelector("#cub").src = "../download.png"
                }
@@ -145,10 +145,10 @@ buttonOne = document.querySelector("button")
 
 let tamagotchi = new Cub("name",0, 10, 10, 10)
 
-document.getElementById("buttonOne").addEventListener("click", (e)=>{tamagotchi.start();tamagotchi.age()})
+document.getElementById("buttonOne").addEventListener("click", (e)=>{tamagotchi.start();tamagotchi.ageUp()})
 document.getElementById("button-2").addEventListener("click", (e)=>{tamagotchi.feed()})
 document.getElementById("button-3").addEventListener("click", (e)=>{tamagotchi.sleepy()})
-document.getElementById("button-4").addEventListener("click", (e)=>{tamagotchi.boredom()}) 
+document.getElementById("button-4").addEventListener("click", (e)=>{tamagotchi.bored()}) 
 
  // some thought process:
  // once start butooon click need to make times go down and age go up     
