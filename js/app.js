@@ -19,18 +19,18 @@ let startButton=document.querySelector('#buttonOne')
 
 buttonOne = document.querySelector("button")
 
-   class Cub {
-      constructor( name,age, hunger, sleepiness, boredom){
-         this.age = age
-         this.hunger = hunger
-         this.sleepiness = sleepiness
-         this.boredom = boredom
-         this.name = name
-         }
+class Cub {
+   constructor( name,age, hunger, sleepiness, boredom){
+      this.age = age
+      this.hunger = hunger
+      this.sleepiness = sleepiness
+      this.boredom = boredom
+      this.name = name
+      }
 
-         start(){
-            let startActive = setInterval(()=>{
-               if(this.hunger >= 1 && this.sleepiness >= 1 && this.boredom >= 1){
+      start(){
+      let startActive = setInterval(()=>{
+         if(this.hunger >= 1 && this.sleepiness >= 1 && this.boredom >= 1){
                   this.hunger --
                   hungerButton.innerText = this.hunger //innerhtml 
                   console.log(hungerButton)
@@ -51,32 +51,31 @@ buttonOne = document.querySelector("button")
             }, 2000)
          }
 
-         feed(){
-             console.log("feed") 
-             this.hunger++
-             hungerButton.innerText=this.hunger    
+      feed(){
+         console.log("feed") 
+         this.hunger++
+         hungerButton.innerText=this.hunger    
             let feedActive =setInterval(()=>{
-                    let hugId=document.querySelector("#hug") 
-                     this.hunger -- 
-                     if(this.hunger ===0){
-                        alert("pet has fainted from hunger")
-                        // getAllDivs.remove()
-                        document.querySelector("#cub").src ="../download (1).jpeg"
-                        document.body.style.backgroundImage = clearInterval(feedActive)
-                        document.querySelector("button").disabled = false
-                        return
-                     }
-            
-                 },3000)
-                 hungerButton.addEventListener("click",()=>{
-                  tamagotchi.feed()
-                  console.log(tamagotchi.hunger)
-                 }) 
+            let hugId=document.querySelector("#hug") 
+            this.hunger -- 
+            if(this.hunger ===0){
+            alert("pet has fainted from hunger")
+            // getAllDivs.remove()
+            document.querySelector("#cub").src ="../download (1).jpeg"
+            document.body.style.backgroundImage = clearInterval(feedActive)
+            document.querySelector("button").disabled = false
+            return
+            }  
+            },5000)
+            hungerButton.addEventListener("click",()=>{
+            tamagotchi.feed()
+            console.log(tamagotchi.hunger)
+            }) 
           }
 
-          sleepy(){
-            this.sleepiness ++
-             sleepinessButton.innerText=this.sleepiness   
+      sleepy(){
+         this.sleepiness ++
+            sleepinessButton.innerText=this.sleepiness   
             let sleepyActive =setInterval(()=>{
                     let sleepId=document.querySelector("#sleep") 
                      this.sleepiness -- 
@@ -88,13 +87,12 @@ buttonOne = document.querySelector("button")
                         document.querySelector("button").disabled = false
                         return
                      }
-            
-                 },3000)
+                 },5000)
                  sleepinessButton.addEventListener("click",()=>{
                   tamagotchi.sleepy()
                   console.log(tamagotchi.sleepiness)
                  }) 
-         }
+            }
          bored(){
             this.boredom ++
              boredomButton.innerText=this.boredom   
@@ -109,7 +107,7 @@ buttonOne = document.querySelector("button")
                         document.querySelector("button").disabled = false
                         return
                      }
-                 },3000)
+                 },5000)
                  boredomButton.addEventListener("click",()=>{
                   tamagotchi.bored()
                   console.log(tamagotchi.boredom)
@@ -132,13 +130,18 @@ buttonOne = document.querySelector("button")
                   alert("Your pet has hits final form!!")
                   document.querySelector("#cub").src = "../download.png"
                }
-            },1000)
+               if(this.age == 21){
+                  clearInterval(intervalId)
+               }else{
+
+               }       
+            },2000)
          }
-         // setName(){
-         //    this.name = prompt("Name your pet")
-         //    let nameId = document.querySelector("#name")
-         //    nameId.innerText = `${this.name}`
-         // }
+         setName(){
+            this.name = prompt("Name your pet")
+            let nameId = document.querySelector("#name")
+            nameId.innerText = `${this.name}`
+         }
       } 
  
      
@@ -154,12 +157,12 @@ document.getElementById("button-4").addEventListener("click", (e)=>{tamagotchi.b
  // once start butooon click need to make times go down and age go up     
    
 // set alert when start button click, "Welcome to Tom's Tamagotchi Pet Cub" 
-// let getStart = document.querySelector("#button-1")
-//  getStart.addEventListener("click", ()=>{
-//    console.log("1: start")
-//    prompt("Enter your Pet Name")
+let getStart = document.querySelector("#buttonOne")
+ getStart.addEventListener("click", ()=>{
+   console.log("1: start")
+   prompt("Enter your Pet Name")
    
-// })
+})
 // turn off the light so the sleepyness don't go up
 // if huger,sleepyness or boredome go up to 10 he died
 // Lost child need to find home or parent in that  process need to take care of basic need
